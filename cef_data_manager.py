@@ -10,8 +10,4 @@ class CefDataManager():
     def get_data(self):
         # TODO check if method was called already today, and cache result 
         response = self.request_handler.make_request()
-        df = self.parser.get_df(response)
-
-# df.to_csv('cef_df.csv')
-
-# print(df)
+        return self.parser.get_df(response)
