@@ -19,5 +19,5 @@ class RequestToDfParser():
         return data_frame
 
     def __get_table(self, response):
-        soup = BeautifulSoup(response.text, 'lxml')
+        soup = BeautifulSoup(response.text, "html.parser")
         return soup.find('table', class_='table')
