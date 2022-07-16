@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import pandas as pd
-from reocrd_date import record_date
+# from reocrd_date import record_date
 
 
 class RequestToDfParser():
