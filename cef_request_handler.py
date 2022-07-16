@@ -3,8 +3,8 @@ import requests
 
 class CefRequestHandler():
     CEF_URL = 'https://aicalliance.org/ajax/ceta_funds.php'
-    HEADER_PATH = 'data\\request_headers.json'
-    DATA_PATH = 'data\\request_data.json'
+    HEADER_PATH = '..\\..\\data\\request_headers.json'
+    DATA_PATH = '..\\..\\data\\request_data.json'
 
     def __init__(self):
         self.headers = self.__get_json(self.HEADER_PATH)
