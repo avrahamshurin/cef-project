@@ -11,7 +11,7 @@ cef_data_manager = CefDataManager()
 df = cef_data_manager.get_data()
 
 in_memory_fp = BytesIO()
-with (pd.ExcelWriter(in_memory_fp, engine='xlsxwriter')) as writer:
+with (pd.ExcelWriter(in_memory_fp, engine='xlsxwriter', engine_kwargs={'options': {'strings_to_numbers': True}})) as writer:
     df.to_excel(writer, index=False)
 
 excel = in_memory_fp.getvalue()
